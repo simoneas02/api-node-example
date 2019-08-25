@@ -23,7 +23,8 @@ $ yarn
 $ yarn start
 ```
 
-## Create an User
+## You can use the fllowing endpoints:
+### Resgister
 - Create a POST request to `http://localhost:3000/auth/resgister`
 - Header should be `application/json`
 - Body should contain the following fields:
@@ -35,8 +36,30 @@ $ yarn start
 }
 ```
 
-## Contributing
+### Authenticate
+After that you created an User:
+- Create a POST request to `http://localhost:3000/auth/authenticate`
+- Header should be `application/json`
+- Body should contain the following fields:
+```JSON
+{
+	"email": "some-email.com",
+	"password": "some-password"
+}
+```
 
+## Projects
+After that you created an User:
+- Create a GET request to `http://localhost:3000/projects`
+- Body should be empty
+- Header should contain the following key and value:
+```
+	Authorization
+	Bearer some-crazy-token
+```
+
+## Contributing
+s
 Find on our [issues](https://github.com/simoneas02/api-node-example/issues/) the next steps of the project ;)  
 Want to contribute? [Follow these recommendations](https://github.com/simoneas02/api-node-example/blob/master/CONTRIBUTING.md).
 

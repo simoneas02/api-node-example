@@ -48,7 +48,7 @@ After that you created an User:
 }
 ```
 
-## Projects
+### Projects
 After that you created an User:
 - Create a GET request to `http://localhost:3000/projects`
 - Body should be empty
@@ -57,6 +57,31 @@ After that you created an User:
 	Authorization
 	Bearer some-crazy-token
 ```
+
+### Forgot Password
+After that you created an User:
+- Create a POST request to `http://localhost:3000/auth/forgot_password`
+- Header should be `application/json`
+- Body should contain the following fields:
+```JSON
+{
+	"email": "some-email.com",
+}
+```
+
+### Reset Password
+After that you created an User and got your token on your email:
+- Create a POST request to `http://localhost:3000/auth/reset_password`
+- Header should be `application/json`
+- Body should contain the following fields:
+```JSON
+{
+	"email": "some-email.com",
+	"token": "crazy-token",
+	"password": "new-password"
+}
+```
+
 
 ## Contributing
 s

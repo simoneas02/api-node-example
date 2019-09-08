@@ -24,10 +24,13 @@ $ yarn start
 ```
 
 ## You can use the fllowing endpoints:
+
 ### Resgister
+
 - Create a POST request to `http://localhost:3000/auth/resgister`
 - Header should be `application/json`
 - Body should contain the following fields:
+
 ```JSON
 {
 	"name": "some-name",
@@ -37,10 +40,13 @@ $ yarn start
 ```
 
 ### Authenticate
+
 After that you created an User:
+
 - Create a POST request to `http://localhost:3000/auth/authenticate`
 - Header should be `application/json`
 - Body should contain the following fields:
+
 ```JSON
 {
 	"email": "some-email.com",
@@ -49,20 +55,26 @@ After that you created an User:
 ```
 
 ### Projects
+
 After that you created an User:
+
 - Create a GET request to `http://localhost:3000/projects`
 - Body should be empty
 - Header should contain the following key and value:
+
 ```
-	Authorization
-	Bearer some-crazy-token
+	key: Authorization
+	value: Bearer some-crazy-token
 ```
 
 ### Forgot Password
+
 After that you created an User:
+
 - Create a POST request to `http://localhost:3000/auth/forgot_password`
 - Header should be `application/json`
 - Body should contain the following fields:
+
 ```JSON
 {
 	"email": "some-email.com",
@@ -70,10 +82,13 @@ After that you created an User:
 ```
 
 ### Reset Password
+
 After that you created an User and got your token on your email:
+
 - Create a POST request to `http://localhost:3000/auth/reset_password`
 - Header should be `application/json`
 - Body should contain the following fields:
+
 ```JSON
 {
 	"email": "some-email.com",
@@ -82,17 +97,14 @@ After that you created an User and got your token on your email:
 }
 ```
 
-
 ## Contributing
-s
-Find on our [issues](https://github.com/simoneas02/api-node-example/issues/) the next steps of the project ;)  
-Want to contribute? [Follow these recommendations](https://github.com/simoneas02/api-node-example/blob/master/CONTRIBUTING.md).
 
+Find on our [issues](https://github.com/simoneas02/api-node-example/issues/) the next steps of the project ;)
+Want to contribute? [Follow these recommendations](https://github.com/simoneas02/api-node-example/blob/master/CONTRIBUTING.md).
 
 ## History
 
 See [Releases](https://github.com/simoneas02/api-node-example/releases) for detailed changelog.
-
 
 ## License
 

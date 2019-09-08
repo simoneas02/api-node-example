@@ -1,16 +1,32 @@
-const express = require('express')
+const express = require("express");
 
-const authMiddleware = require('../middleares/auth')  
+const authMiddleware = require("../middleares/auth");
 
-const router = express.Router()
+const Project = require("../models/project");
+const Task = require("../models/task");
 
-router.use(authMiddleware)
+const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send({ 
-    OK: true,
-    user: req.userId
-  })
-})
+router.use(authMiddleware);
 
-module.exports = app => app.use('/projects', router)
+router.get("/", async (req, res) => {
+  res.send({ user: req.userId });
+});
+
+router.get("/:projectId", async (req, res) => {
+  res.send({ user: req.userId });
+});
+
+router.post("/", async (req, res) => {
+  res.send({ user: req.userId });
+});
+
+router.put("/:projectId", async (req, res) => {
+  res.send({ user: req.userId });
+});
+
+router.delete("/:projectId", async (req, res) => {
+  res.send({ user: req.userId });
+});
+
+module.exports = app => app.use("/projects", router);
